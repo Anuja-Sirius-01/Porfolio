@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anuja Indalkar — AI &amp; Data Science Portfolio</title>
+<meta name="description" content="Anuja Tatya Indalkar — AI &amp; Data Science postgraduate student. Portfolio of projects, skills, and academic journey.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Icons (self-hosted, no external dependency) -->
+<link rel="stylesheet" href="css/fontawesome.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Custom Cursor Glow (decorative) ===== -->
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- ===== Progress Bar ===== -->
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+
+<!-- ===== Navigation ===== -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <span class="nav-logo-bracket">&lt;</span>Anuja<span class="nav-logo-bracket">/&gt;</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#education" class="nav-link" data-section="education">Education</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
+      <a href="#certifications" class="nav-link" data-section="certifications">Certifications</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="assets/resume.pdf" class="btn btn-outline btn-sm" download>
+        <i class="fa-solid fa-download"></i> Resume
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav>
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#education" class="mobile-link">Education</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#achievements" class="mobile-link">Achievements</a>
+    <a href="#certifications" class="mobile-link">Certifications</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+  <a href="assets/resume.pdf" class="btn btn-primary" download><i class="fa-solid fa-download"></i> Download Resume</a>
+</div>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <canvas id="networkCanvas" class="network-canvas" aria-hidden="true"></canvas>
+  <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-text" data-animate="fade-up">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> Open to Learning • Projects • Opportunities</div>
+
+      <h1 class="hero-title">
+        Hi, I'm <span class="text-gradient">Anuja Indalkar</span>
+      </h1>
+
+      <p class="hero-role">
+        AI &amp; Data Science Student&nbsp;|&nbsp;<span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+      </p>
+
+      <p class="hero-desc">
+        Passionate about technology, artificial intelligence, data, and building meaningful digital
+        solutions. I enjoy transforming ideas into practical projects while continuously learning and
+        improving my technical skills.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span> <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="assets/resume.pdf" class="btn btn-outline" download>
+          <i class="fa-solid fa-download"></i> <span>Download Resume</span>
+        </a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="hero-meta-num">9.29</span><span class="hero-meta-label">Final CGPA</span></div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item"><span class="hero-meta-num">3+</span><span class="hero-meta-label">Projects Built</span></div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item"><span class="hero-meta-num">M.Sc.</span><span class="hero-meta-label">AI &amp; DS, in progress</span></div>
+      </div>
+    </div>
+
+    <div class="hero-avatar-wrap" data-animate="fade-up" data-delay="150">
+      <div class="hero-avatar-ring">
+        <div class="hero-avatar">
+          <img src=images/profile.png alt="Portrait of Anuja Tatya Indalkar" onerror="this.parentElement.classList.add('avatar-fallback')">
+          <div class="avatar-placeholder"><i class="fa-solid fa-user-graduate"></i><span>Add images/profile.jpg</span></div>
+        </div>
+        <span class="hero-orbit-badge hero-orbit-badge-1"><i class="fa-brands fa-python"></i></span>
+        <span class="hero-orbit-badge hero-orbit-badge-2"><i class="fa-solid fa-database"></i></span>
+        <span class="hero-orbit-badge hero-orbit-badge-3"><i class="fa-solid fa-brain"></i></span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+    <span>scroll</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="container">
+    <p class="section-eyebrow" data-animate="fade-up">// 01_about</p>
+    <h2 class="section-title" data-animate="fade-up">About Me</h2>
+
+    <div class="about-grid">
+      <div class="about-photo" data-animate="fade-up">
+        <div class="about-photo-frame">
+          <img src="images/about.jpg" alt="Anuja Indalkar" onerror="this.style.display='none'">
+          <div class="avatar-placeholder"><i class="fa-solid fa-image"></i><span>Add images/about.jpg</span></div>
+        </div>
+        <div class="about-photo-tag"><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra</div>
+      </div>
+
+      <div class="about-content" data-animate="fade-up" data-delay="100">
+        <p class="about-lead">
+          I'm a postgraduate student pursuing an <strong>M.Sc. in Artificial Intelligence &amp; Data
+          Science</strong> at Indira University, School of Information Technology, after completing my
+          B.Sc. in Computer Science at Savitribai Phule Pune University (SPPU).
+        </p>
+        <p>
+          My interest lies at the intersection of <strong>data, algorithms, and real-world problem
+          solving</strong> — from building web platforms to analyzing datasets with Python. I like
+          projects that force me to learn something new, and I try to bring the same discipline I
+          developed during my NCC training into how I approach technical work: consistency, structure,
+          and follow-through.
+        </p>
+        <p>
+          Outside the classroom, I'm drawn to <strong>machine learning fundamentals, secure system
+          design, and clean data-driven storytelling</strong> — and I'm actively building a portfolio of
+          projects that reflect that curiosity.
+        </p>
+
+        <div class="about-cards">
+          <div class="about-card">
+            <span class="about-card-icon">🎓</span>
+            <h3>Education</h3>
+            <p>M.Sc. AI &amp; Data Science, Indira University (2026)</p>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon">💻</span>
+            <h3>Technical Interests</h3>
+            <p>Web development, secure systems, data-driven apps</p>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon">🤖</span>
+            <h3>AI &amp; Data Science</h3>
+            <p>Machine learning, data analysis, applied AI</p>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon">🚀</span>
+            <h3>Career Goal</h3>
+            <p>Building a career as an AI / Data Science professional</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="section section-alt" id="skills">
+  <div class="container">
+    <p class="section-eyebrow" data-animate="fade-up">// 02_skills</p>
+    <h2 class="section-title" data-animate="fade-up">Technical Skills</h2>
+    <p class="section-sub" data-animate="fade-up">Tools and technologies I use to learn, build, and ship projects.</p>
+
+    <div class="skills-grid">
+
+      <div class="skill-category" data-animate="fade-up">
+        <div class="skill-category-head">
+          <i class="fa-solid fa-code"></i>
+          <h3>Programming</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-category" data-animate="fade-up" data-delay="80">
+        <div class="skill-category-head">
+          <i class="fa-solid fa-brain"></i>
+          <h3>Data &amp; AI</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Data Analysis</span>
+          <span class="skill-tag">Artificial Intelligence</span>
+        </div>
+      </div>
+
+      <div class="skill-category" data-animate="fade-up" data-delay="160">
+        <div class="skill-category-head">
+          <i class="fa-solid fa-globe"></i>
+          <h3>Web Development</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML</span>
+          <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+          <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span class="skill-tag"><i class="fa-brands fa-php"></i> PHP</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+        </div>
+      </div>
+
+      <div class="skill-category" data-animate="fade-up" data-delay="240">
+        <div class="skill-category-head">
+          <i class="fa-solid fa-toolbox"></i>
+          <h3>Tools &amp; Technologies</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+          <span class="skill-tag"><i class="fa-brands fa-github"></i> GitHub</span>
+          <span class="skill-tag"><i class="fa-solid fa-code"></i> VS Code</span>
+          <span class="skill-tag">PyCharm</span>
+          <span class="skill-tag">XAMPP</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section class="section" id="education">
+  <div class="container">
+    <p class="section-eyebrow" data-animate="fade-up">// 03_education</p>
+    <h2 class="section-title" data-animate="fade-up">Education</h2>
+
+    <div class="timeline">
+      <div class="timeline-item" data-animate="fade-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">2026</span>
+          <h3>M.Sc. Artificial Intelligence &amp; Data Science</h3>
+          <p class="timeline-org">Indira University — School of Information Technology</p>
+          <p class="timeline-desc">Postgraduate specialization focused on machine learning, data science, and applied AI systems.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-animate="fade-up" data-delay="100">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">2023 – 2026</span>
+          <h3>B.Sc. Computer Science</h3>
+          <p class="timeline-org">Savitribai Phule Pune University (SPPU)</p>
+          <p class="timeline-desc">Undergraduate foundation in programming, databases, and core computer science concepts.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-animate="fade-up" data-delay="200">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">2021 – 2023</span>
+          <h3>Higher Secondary Education — Science</h3>
+          <p class="timeline-org">Lokseva E School</p>
+          <p class="timeline-desc">Science stream, building the analytical foundation for a computing degree.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="section section-alt" id="projects">
+  <div class="container">
+    <p class="section-eyebrow" data-animate="fade-up">// 04_projects</p>
+    <h2 class="section-title" data-animate="fade-up">Projects</h2>
+    <p class="section-sub" data-animate="fade-up">A selection of things I've built while learning.</p>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <article class="project-card" data-animate="fade-up">
+        <div class="project-media">
+          <div class="project-media-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <span class="project-tag-float">Security Platform</span>
+        </div>
+        <div class="project-body">
+          <h3>AstraShield</h3>
+          <p class="project-role">Intrusion Detection &amp; Prevention System</p>
+          <p class="project-desc">
+            A web-based security platform designed to monitor suspicious activities, detect potential
+            threats, and provide security monitoring capabilities.
+          </p>
+          <div class="project-stack">
+            <span>PHP</span><span>MySQL</span><span>Python</span><span>HTML</span><span>CSS</span><span>Bootstrap</span>
+          </div>
+          <button class="project-details-toggle" aria-expanded="false">
+            <span>View Details</span> <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="project-details">
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Real-time security monitoring</li>
+              <li><i class="fa-solid fa-check"></i> Threat detection engine</li>
+              <li><i class="fa-solid fa-check"></i> User authentication system</li>
+              <li><i class="fa-solid fa-check"></i> Device monitoring</li>
+              <li><i class="fa-solid fa-check"></i> Security logs &amp; audit trail</li>
+              <li><i class="fa-solid fa-check"></i> Admin dashboard</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Anuja-Sirius-01" class="btn btn-outline btn-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card" data-animate="fade-up" data-delay="100">
+        <div class="project-media">
+          <div class="project-media-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <span class="project-tag-float">Data Analysis</span>
+        </div>
+        <div class="project-body">
+          <h3>Student Data Analysis</h3>
+          <p class="project-role">Exploratory Data Analysis with Python</p>
+          <p class="project-desc">
+            A data analysis project exploring student performance and academic patterns using Python,
+            with cleaning, aggregation, and visualization of tabular datasets.
+          </p>
+          <div class="project-stack">
+            <span>Python</span><span>NumPy</span><span>Pandas</span>
+          </div>
+          <button class="project-details-toggle" aria-expanded="false">
+            <span>View Details</span> <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="project-details">
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Data cleaning &amp; preprocessing</li>
+              <li><i class="fa-solid fa-check"></i> Statistical summaries with Pandas</li>
+              <li><i class="fa-solid fa-check"></i> Numerical computation with NumPy</li>
+              <li><i class="fa-solid fa-check"></i> Trend &amp; pattern visualization</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Anuja-Sirius-01" class="btn btn-outline btn-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card" data-animate="fade-up" data-delay="200">
+        <div class="project-media">
+          <div class="project-media-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <span class="project-tag-float">This Website</span>
+        </div>
+        <div class="project-body">
+          <h3>Personal Portfolio</h3>
+          <p class="project-role">Responsive Developer Portfolio</p>
+          <p class="project-desc">
+            The website you're browsing right now — a fully responsive personal portfolio built from
+            scratch to showcase my academic journey, skills, and projects.
+          </p>
+          <div class="project-stack">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          </div>
+          <button class="project-details-toggle" aria-expanded="false">
+            <span>View Details</span> <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="project-details">
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Fully responsive, mobile-first layout</li>
+              <li><i class="fa-solid fa-check"></i> Scroll animations &amp; micro-interactions</li>
+              <li><i class="fa-solid fa-check"></i> Accessible, semantic markup</li>
+              <li><i class="fa-solid fa-check"></i> Deployed on GitHub Pages</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Anuja-Sirius-01" class="btn btn-outline btn-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<section class="section" id="achievements">
+  <div class="container">
+    <p class="section-eyebrow" data-animate="fade-up">// 05_achievements</p>
+    <h2 class="section-title" data-animate="fade-up">Achievements</h2>
+
+    <div class="achievements-grid">
+      <div class="achievement-card" data-animate="fade-up">
+        <span class="achievement-icon">🏆</span>
+        <h3>Technical Project</h3>
+        <p>AstraShield — an independently built intrusion detection &amp; prevention platform.</p>
+      </div>
+      <div class="achievement-card" data-animate="fade-up" data-delay="60">
+        <span class="achievement-icon">📊</span>
+        <h3>Data Science Project</h3>
+        <p>Student Data Analysis project using Python, NumPy and Pandas.</p>
+      </div>
+      <div class="achievement-card" data-animate="fade-up" data-delay="120">
+        <span class="achievement-icon">🎤</span>
+        <h3>Academic Presentation &amp; Performance</h3>
+        <p>1st year: 9.84 CGPA · 2nd year: 9.64 CGPA · 3rd year: 9.36 CGPA · Final CGPA: 9.29</p>
+      </div>
+      <div class="achievement-card" data-animate="fade-up" data-delay="180">
+        <span class="achievement-icon">💡</span>
+        <h3>National Cadet Corps (NCC)</h3>
+        <p>Completed Jr. NCC, including national and city-level camps.</p>
+      </div>
+      <div class="achievement-card" data-animate="fade-up" data-delay="240">
+        <span class="achievement-icon">📜</span>
+        <h3>Certification &amp; Sports</h3>
+        <p>Master's in DSA certification, alongside multiple sports achievements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section class="section section-alt" id="certifications">
+  <div class="container">
+    <p class="section-eyebrow" data-animate="fade-up">// 06_certifications</p>
+    <h2 class="section-title" data-animate="fade-up">Certifications</h2>
+
+    <div class="cert-grid">
+      <div class="cert-card" data-animate="fade-up">
+        <div class="cert-card-top">
+          <i class="fa-solid fa-certificate"></i>
+          <span class="cert-date">Sept 2024</span>
+        </div>
+        <h3>Mastering Data Structures &amp; Algorithms using C and C++</h3>
+        <p class="cert-org">Udemy · Instructor: Abdul Bari · 58.5 hours</p>
+        <a href="https://ude.my/UC-25927467-1439-4b9f-b68c-8c47a7a424db" class="btn btn-outline btn-sm">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+
+      <div class="cert-card" data-animate="fade-up" data-delay="100">
+        <div class="cert-card-top">
+          <i class="fa-solid fa-certificate"></i>
+          <span class="cert-date">Dec 2025</span>
+        </div>
+        <h3>Introduction to Python</h3>
+        <p class="cert-org">Free Course Certificate</p>
+        <a href="assets/certificates/Introduction-to-Python-Certificate.pdf" download class="btn btn-outline btn-sm">Download Certificate <i class="fa-solid fa-download"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JOURNEY ===== -->
+<section class="section" id="journey">
+  <div class="container">
+    <p class="section-eyebrow" data-animate="fade-up">// 07_journey</p>
+    <h2 class="section-title" data-animate="fade-up">My Journey</h2>
+
+    <div class="journey-track" data-animate="fade-up">
+      <div class="journey-step"><div class="journey-icon"><i class="fa-solid fa-graduation-cap"></i></div><span>Education</span></div>
+      <div class="journey-line"></div>
+      <div class="journey-step"><div class="journey-icon"><i class="fa-solid fa-book-open"></i></div><span>Learning</span></div>
+      <div class="journey-line"></div>
+      <div class="journey-step"><div class="journey-icon"><i class="fa-solid fa-diagram-project"></i></div><span>Projects</span></div>
+      <div class="journey-line"></div>
+      <div class="journey-step"><div class="journey-icon"><i class="fa-solid fa-certificate"></i></div><span>Certifications</span></div>
+      <div class="journey-line"></div>
+      <div class="journey-step journey-step-future"><div class="journey-icon"><i class="fa-solid fa-rocket"></i></div><span>Future Goals</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESUME CTA ===== -->
+<section class="resume-cta">
+  <div class="container resume-cta-inner" data-animate="fade-up">
+    <h2>Want to know more about my work?</h2>
+    <p>Download my resume and explore my academic journey, technical skills and projects.</p>
+    <a href="assets/resume.pdf" class="btn btn-primary btn-lg" download>
+      <i class="fa-solid fa-download"></i> Download Resume
+    </a>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="container">
+    <p class="section-eyebrow" data-animate="fade-up">// 08_contact</p>
+    <h2 class="section-title" data-animate="fade-up">Let's Connect</h2>
+    <p class="section-sub" data-animate="fade-up">Have an idea, opportunity, or simply want to connect? Feel free to reach out.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info" data-animate="fade-up">
+        <a href="mailto:indalkaranuja2@gmail.com" class="contact-item">
+          <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+          <span>
+            <strong>Email</strong>
+            <small>indalkaranuja2@gmail.com</small>
+          </span>
+        </a>
+        <a href="https://www.linkedin.com/in/anuja-indalkar-049a44332/" class="contact-item">
+          <span class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+          <span>
+            <strong>LinkedIn</strong>
+            <small>anuja-indalkar-049a44332</small>
+          </span>
+        </a>
+        <a href="https://github.com/Anuja-Sirius-01" class="contact-item">
+          <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
+          <span>
+            <strong>GitHub</strong>
+            <small>github.com/Anuja-Sirius-01</small>
+          </span>
+        </a>
+        <a href="tel:+918459911948" class="contact-item">
+          <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+          <span>
+            <strong>Phone</strong>
+            <small>+91 84599 11948</small>
+          </span>
+        </a>
+      </div>
+
+      <form class="contact-form" id="contactForm" data-animate="fade-up" data-delay="100" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <span class="form-error" id="emailError"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+          <span class="form-error" id="subjectError"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">
+          <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <p class="form-success" id="formSuccess">✓ Message sent! I'll get back to you soon.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-name">Anuja Tatya Indalkar</span>
+      <span class="footer-tagline">Building • Learning • Innovating</span>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://github.com/Anuja-Sirius-01" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/anuja-indalkar-049a44332/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="mailto:indalkaranuja2@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Anuja T. Indalkar. All Rights Reserved.</p>
+      <p>Designed &amp; Developed by Anuja T. Indalkar</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
